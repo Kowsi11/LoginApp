@@ -1,0 +1,35 @@
+<section>
+    <div class="login-card">
+        <div class="row">
+            <div class="title">Login </div>
+        </div>
+        <div class="row">
+            <div class="input-form">
+                <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+                    <label for="username">User Name: </label>
+                    <input type="text" formControlName="username"
+                        [ngClass]="{'is-invalid': submitted && f.username.errors}" />
+                    <div *ngIf="submitted && f.username.errors" class="alert alert-danger">
+                        <div *ngIf="f.username.errors.required"> User name required!</div>
+                    </div>
+
+                    <label for="password">Password: </label>
+                    <input id="password" type="password" formControlName="password"
+                        [ngClass]="{'is-invalid':submitted && f.password.errors}" />
+                    <div *ngIf="submitted && f.password.errors" class="alert alert-danger">
+                        <div *ngIf="f.password.errors.required"> Password required</div>
+                    </div>
+                    <span class="input-btn">
+                        <button class="btn" type="submit">Submit</button>
+                    </span>
+                    <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div> -->
+                </form>
+
+
+            </div>
+
+            <!-- <p>Value: {{ name.value }}</p> -->
+        </div>
+    </div>
+</section>

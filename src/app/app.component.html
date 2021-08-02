@@ -1,0 +1,22 @@
+<!-- <button (click)="sayMessage()" [disabled]="canClick">Trigger alert message</button>
+<p [id]="sayHelloId" [style.color]="fontColor">You can set my color in the component!</p> -->
+
+<!-- <app-structural></app-structural>
+<app-power></app-power> -->
+
+<!-- nav -->
+<nav class="navbar navbar-expand border-bottom bg-light" *ngIf="user">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="navbar-nav">
+
+        <a class="nav-item nav-link" routerLink="home">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<!-- main app container -->
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
